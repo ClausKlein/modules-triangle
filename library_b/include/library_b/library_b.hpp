@@ -1,8 +1,12 @@
 #pragma once
 
+#if LIBRARY_C_ENABLE_MODULE_SUPPORT
+import library_c;
+#else
 #include <library_c/library_c.hpp>
-#include <string>
+#endif
+#include <cstddef>
 
 namespace library_b {
-    std::string describe();
+    std::size_t describe();
 }
