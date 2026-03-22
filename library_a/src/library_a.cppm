@@ -3,9 +3,13 @@ module;
 #include <library_c/library_c.hpp>
 #include <library_b/library_b.hpp>
 
-export module library_a;
-
+#ifndef ABC_HAS_IMPORT_STD
+    #include <iostream>
+#else
 import std;
+#endif
+
+export module library_a;
 
 #if LIBRARY_C_ENABLE_MODULE_SUPPORT
 import library_c;
