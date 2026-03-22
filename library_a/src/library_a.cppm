@@ -12,7 +12,5 @@ import library_c;
 #endif
 
 namespace library_a {
-    std::size_t describe() {
-        return 42 + library_c::describe() + library_b::describe();
-    }
-}
+export inline std::size_t describe() { return 42 + library_c::describe() + library_b::describe(); }
+} // namespace library_a

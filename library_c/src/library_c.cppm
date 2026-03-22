@@ -8,7 +8,7 @@ extern "C++" {
 export {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winclude-angled-in-module-purview"
-  #include "library_c.cpp"
+#include "library_c.cpp"
 #pragma clang diagnostic pop
 }
 }
